@@ -18,14 +18,29 @@ public class ArrayListProvisional {
     
     public void AgregarUsuario(String user,String NUser,Calendar FNaci,String Ava,String Pass)
     {
-        Usuarios.add(new Jugador(user,NUser,FNaci,Ava,Pass));
+            existe(user);
+                       
+            Usuarios.add(new Jugador(user,NUser,FNaci,Ava,Pass));
+            
+        
     }
     
+    public boolean existe(String user)
+    {
+        for(Jugador c:Usuarios)
+        {
+           if(c.username.equals(user))
+           {
+               return true;
+           } 
+        }
+        return false;
+    }
     public void imprimir()
     {
         for(Jugador c:Usuarios)
         {
-            
+           
         }
     }
 }

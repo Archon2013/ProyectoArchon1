@@ -18,7 +18,7 @@ import logicaGeneral.Jugador;
  */
 public class AddUsuarios extends javax.swing.JFrame {
    
-           ArrayListProvisional cd=new  ArrayListProvisional();
+           ArrayListProvisional lista=new  ArrayListProvisional();
            Menu m=new Menu();    
     /**
      * Creates new form AddUsuarios
@@ -148,7 +148,9 @@ public class AddUsuarios extends javax.swing.JFrame {
         JDateChooser FNaci = dcFecha;
         String Ava = lblAvatar.getText();
         JPasswordField Pass = pfcontra;
-        cd.AgregarUsuario(user, NUser, null, Ava, NUser);
+        if( ! lista.existe(user) ){
+        lista.AgregarUsuario(user, NUser, null, Ava, NUser);
+        }
         m.setVisible(true);
         txtUsername.setText("");
         txtNombre.setText("");
