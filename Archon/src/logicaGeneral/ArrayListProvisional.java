@@ -16,16 +16,16 @@ public class ArrayListProvisional {
     ArrayList <Jugador> Usuarios=new ArrayList();
     
     
-    public void AgregarUsuario(int id,String user,String NUser,Calendar FNaci,String Ava,String Pass)
+    public void AgregarUsuario(String user,String NUser,Calendar FNaci,String Ava,String Pass)
     {
-        Usuarios.add(new Jugador(id,user,NUser,FNaci,Ava,Pass));
+        Usuarios.add(new Jugador(user,NUser,FNaci,Ava,Pass));
     }
     
     public void imprimir()
     {
         for(Jugador c:Usuarios)
         {
-            System.out.println(Usuarios.toString());;
+            
         }
     }
 }

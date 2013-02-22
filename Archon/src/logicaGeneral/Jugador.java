@@ -12,7 +12,7 @@ import javax.swing.JLabel;
  * @author Alexander
  */
 public class Jugador {
-    int ID;
+    int ID=0;
     String username;
     String NombreUsuario;
     Calendar FechaNacimiento;
@@ -21,9 +21,9 @@ public class Jugador {
     int puntos=0;
     boolean EstaActivo=true;
     
-    public Jugador(int id,String user,String NUser,Calendar FNaci,String Ava,String Pass )
+    public Jugador(String user,String NUser,Calendar FNaci,String Ava,String Pass )
     {
-       ID=id;
+       ID=ID++;
        username=user;
        NombreUsuario=NUser;
        FechaNacimiento=FNaci;

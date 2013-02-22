@@ -148,9 +148,14 @@ public class AddUsuarios extends javax.swing.JFrame {
         JDateChooser FNaci = dcFecha;
         String Ava = lblAvatar.getText();
         JPasswordField Pass = pfcontra;
- cd.AgregarUsuario(1, user, NUser, null, Ava, NUser);
- this.setVisible(false);
- m.setVisible(true);
+        cd.AgregarUsuario(user, NUser, null, Ava, NUser);
+        m.setVisible(true);
+        txtUsername.setText("");
+        txtNombre.setText("");
+        dcFecha.setDate(null);
+        lblAvatar.setText("");
+        pfcontra.setText("");
+ 
         // Usuarios.add(new Jugador(1,txtUsername,txtNombre,dcFecha,lblAvatar,pfcontra));
         
     }//GEN-LAST:event_btnAgregarUsuarioMouseClicked
